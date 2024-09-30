@@ -1,0 +1,281 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: rgb(29,36,50);
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #0b0d16;
+    color: whitesmoke;
+}
+
+.navbar-left .logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 25px;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+    background-color: #dbdada;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.light-theme .navbar {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.light-theme .navbar-left .logo {
+    color: #333;
+}
+
+body.light-theme .icon-btn i {
+    color: #333;
+}
+
+body.light-theme .search-bar {
+    background-color: #bbc6c6;
+}
+
+body.light-theme .search-bar input {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .quick-nav a {
+    color: black;
+}
+
+body.light-theme .surah-item {
+    background-color: #ffffff;
+    border-color: #ddd;
+}
+
+body.light-theme .surah-item:hover {
+    background-color: #f7f7f7;
+}
+
+body.light-theme .surah-link h3 {
+    color: #333;
+}
+
+body.light-theme .surah-link p {
+    color: #4ea1ff;
+}
+
+body.light-theme .surah-link .surah-ayat {
+    color: #777;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 45px 29rem;
+    background-color: #121926;
+}
+
+.search-bar input {
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background-color: #1A2233;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.quick-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    color: #FFDD57;
+    font-weight: bold;
+}
+
+/* Container and Grid */
+.container {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 20px;
+}
+
+.surah-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+/* Surah Item */
+.surah-item {
+    background-color: rgb(14, 20, 32);
+    border-radius: 15px;
+    border-style: double;
+    border-color: whitesmoke;
+    border-width: 2px;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.surah-number-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4b5c, #ff6b81);
+    transition: all 0.3s ease;
+}
+
+.surah-number {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.surah-details {
+    flex: 1;
+    margin-left: 25px;
+}
+
+.surah-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.surah-link h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.surah-link p {
+    margin: 0;
+    font-size: 1rem;
+    color: #4ea1ff;
+    margin-top: 5px;
+}
+
+.surah-link .surah-ayat {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.surah-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(29, 117, 7, 0.2);
+    background-color: #1e1f3a;
+}
+
+/* Laptop/Desktop Specific Styles */
+@media (min-width: 601px) {
+    .navbar-left .logo {
+        padding-left: 14rem;
+    }
+
+    .navbar-right {
+        padding-right: 15rem;
+    }
+
+    .search-bar {
+        padding: 45px 29rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 600px) {
+    .navbar-left .logo {
+        padding-left: 1rem;
+        font-size: 30px;
+    }
+
+    .navbar-right {
+        padding-right: 1rem;
+    }
+
+    .icon-btn {
+        font-size: 20px;
+    }
+
+    .search-bar {
+        padding: 20px 1rem;
+    }
+
+    .search-bar input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .surah-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .surah-item {
+        padding: 15px;
+        padding-left: 20px;
+    }
+
+    .surah-number-icon {
+        min-width: 35px;
+        height: 35px;
+    }
+
+    .surah-number {
+        font-size: 1rem;
+    }
+
+    .surah-link h3 {
+        font-size: 1rem;
+    }
+
+    .surah-link p, span {
+        font-size: 13px;
+    }
+}
