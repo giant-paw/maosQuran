@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
 /* Dark Theme Styles */
 body.dark-theme {
     background-color: rgb(29,36,50);
@@ -140,29 +144,32 @@ body.light-theme .surah-link .surah-ayat {
 }
 
 /* Surah Item */
+/* Perbaikan pada .surah-item */
 .surah-item {
+    display: flex; /* Gunakan flexbox untuk pengaturan layout */
+    align-items: center; /* Vertikal sejajar */
+    justify-content: flex-start; /* Nomor surah tetap di awal */
     background-color: rgb(14, 20, 32);
     border-radius: 15px;
     border-style: double;
     border-color: whitesmoke;
     border-width: 2px;
-    padding: 25px;
+    padding: 20px;
     position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    min-height: 100px; /* Set a minimum height to maintain uniformity */
 }
 
+/* Memastikan ikon nomor tetap proporsional */
 .surah-number-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 45px;
-    height: 45px;
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
     border-radius: 50%;
     background: linear-gradient(135deg, #ff4b5c, #ff6b81);
-    transition: all 0.3s ease;
+    margin-right: 20px; /* Space between number and surah details */
 }
 
 .surah-number {
@@ -171,9 +178,9 @@ body.light-theme .surah-link .surah-ayat {
     font-weight: 600;
 }
 
+/* Penyesuaian pada surah details */
 .surah-details {
-    flex: 1;
-    margin-left: 25px;
+    flex: 1; /* Make surah details take up the remaining space */
 }
 
 .surah-link {
@@ -202,6 +209,7 @@ body.light-theme .surah-link .surah-ayat {
     color: #bbb;
 }
 
+/* Hover effect */
 .surah-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(29, 117, 7, 0.2);

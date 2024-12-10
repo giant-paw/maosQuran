@@ -41,17 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Tampilkan item jika sesuai dengan input pencarian
             if (surahName.includes(query)) {
-                item.style.display = 'block'; // Tampilkan Surah jika cocok
+                item.classList.add('hide-number'); // Tambahkan kelas untuk menyembunyikan nomor
                 foundAny = true; // Setel ke true jika ada yang cocok
             } else {
                 item.style.display = 'none'; // Sembunyikan Surah jika tidak cocok
+                item.classList.remove('hide-number'); // Kembalikan nomor jika surah tidak cocok
             }
         });
 
-        // Jika input kosong, tampilkan semua item
+        // Jika input kosong, tampilkan semua item dengan nomor
         if (query === "") {
             surahItems.forEach(function (item) {
-                item.style.display = 'block'; // Tampilkan semua surah
+                item.style.display = 'flex'; // Tampilkan semua surah
+                item.classList.remove('hide-number'); // Tampilkan kembali nomor surah
             });
         }
 
