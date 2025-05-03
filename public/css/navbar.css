@@ -1,0 +1,33 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #0b0d16;
+    color: whitesmoke;
+}
+
+.navbar-left .logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 600px) {
+    .navbar-left .logo {
+        padding-left: 1rem;
+        font-size: 30px;
+    }
+
+    .navbar-right {
+        padding-right: 1rem;
+    }
+}

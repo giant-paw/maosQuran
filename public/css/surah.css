@@ -1,0 +1,100 @@
+/* General Styles */
+body.dark-theme {
+    background-color: #0b0d16;
+    color: whitesmoke;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+/* Surah Container */
+.surah-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.surah-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.surah-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2ecc71; /* Warna hijau */
+}
+
+.surah-meta,
+.surah-meaning {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Ayat Grid */
+.ayat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.ayat-item {
+    padding: 15px;
+    background: #1e2230;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.ayat-item:hover {
+    transform: scale(1.02);
+    background-color: #2ecc71;
+    color: #0b0d16;
+}
+
+.ayat-arab {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.ayat-latin, .ayat-translation {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #dcdcdc;
+}
+
+audio {
+    width: 100%;
+    outline: none;
+}
+
+
+@media (max-width: 600px) {
+    .surah-title {
+        font-size: 24px;
+    }
+
+    .ayat-grid {
+        gap: 15px;
+    }
+
+    .ayat-item {
+        padding: 10px;
+    }
+
+    .ayat-arab {
+        font-size: 20px;
+    }
+
+    .ayat-latin, .ayat-translation {
+        font-size: 16px;
+    }
+}

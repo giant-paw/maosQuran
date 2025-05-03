@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
     const surahItems = document.querySelectorAll('.surah-item');
 
+    const audioElements = document.querySelectorAll('.ayat audio');
+    const ayatContainers = document.querySelectorAll('.ayat');
+
     // Cek dan atur tema yang disimpan di localStorage
     if (localStorage.getItem('theme') === 'light') {
         body.classList.remove('dark-theme');
@@ -62,4 +65,27 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Tidak ada surah yang cocok"); // Ini bisa diganti dengan pesan di UI jika diperlukan
         }
     });
+
+    audioElements.forEach((audio, index) => {
+        audio.addEventListener('play', () => {
+            // Hilangkan highlight dari semua ayat
+            ayatContainers.forEach(container => container.classList.remove('highlight'));
+
+            // Tambahkan highlight ke ayat yang sedang diputar
+            ayatContainers[index].classList.add('highlight');
+        });
+
+        audio.addEventListener('ended', () => {
+            // Jika bukan audio terakhir, mainkan audio berikutnya
+            if (index < audioElements.length - 1) {
+                audioElements[index + 1].play();
+            }
+        });
+    });
+
+    // Mulai pemutaran otomatis dari ayat pertama
+    if (audioElements.length > 0) {
+        audioElements[0].play();
+    }
 });
+

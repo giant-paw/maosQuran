@@ -10,21 +10,8 @@
 </head>
 
 <body class="dark-theme">
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="#" class="logo">Maos Quran</a>
-        </div>
-        <div class="navbar-right" style="color: white;">
-            <!-- Toggle Theme Icon -->
-            <button id="theme-toggle" class="icon-btn" style="color: white;">
-                <i class="fa-solid fa-moon" style="font-size:25px;"></i>
-            </button>
-            <!-- Search Icon -->
-            <button id="search-toggle" class="icon-btn" style="color: white;">
-                <i class="fa-solid fa-magnifying-glass" style="font-size:25px;"></i>
-            </button>
-        </div>
-    </nav>
+    
+    @include('components.navbar') 
     
     <div class="search-bar">
         <input type="text" id="search-input" placeholder="Cari Surah...">
