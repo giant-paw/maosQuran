@@ -59,8 +59,13 @@ h1, h2, h3 {
 }
 
 .ayat-arab {
-    font-size: 24px;
+    /* font-size: 24px;
     font-weight: bold;
+    text-align: right;
+    margin-bottom: 10px; */
+
+    font-family: "Cascadia Code", monospace;
+    font-size: 30px;
     text-align: right;
     margin-bottom: 10px;
 }
@@ -91,7 +96,11 @@ audio {
     }
 
     .ayat-arab {
-        font-size: 20px;
+        font-family: "Cascadia Code", monospace;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 10px;
     }
 
     .ayat-latin, .ayat-translation {
